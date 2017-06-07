@@ -13,12 +13,11 @@ public class ExecuteServiceImpl implements ExecuteService {
 	char[] inputs;
 	char[] codes;
 	int inputPointer;
-	int pointer;//指针
+	int pointer=0;//指针
 
 	char[] memory=new char[1000];//内存
 
 
-	StringBuilder ouputBuilder=new StringBuilder();
 
 	/**
 	 * 请实现该方法
@@ -38,7 +37,12 @@ public class ExecuteServiceImpl implements ExecuteService {
 		inputPointer=0;
 
 		//开始编译
-		return compile(0);
+		try{
+			return compile(0);
+		}
+		catch (Exception e){
+			return e.toString();
+		}
 
 	}
 
@@ -46,6 +50,8 @@ public class ExecuteServiceImpl implements ExecuteService {
    @return 输出的数据
     */
 	public String compile(int index){
+		StringBuilder outputBuilder=new StringBuilder();
+		System.out.println(outputBuilder.toString());
 		for(int i=index;i<codes.length;i++){
 			switch (codes[i]){
 				case '>':
@@ -65,7 +71,8 @@ public class ExecuteServiceImpl implements ExecuteService {
 					//System.out.println("memory["+this.pointer+"]："+(int)memory[this.pointer]);
 					break;
 				case '.':
-					ouputBuilder.append(memory[this.pointer]);
+					outputBuilder.append(memory[this.pointer]);
+					System.out.println(outputBuilder.toString());
 					//System.out.print(memory[this.pointer]);break;
 				case ',':
 					if(inputs.length!=0){
@@ -89,9 +96,9 @@ public class ExecuteServiceImpl implements ExecuteService {
 						}
 					}
 					while (memory[tempPointer]!='\0'){
-						//System.out.println("index:"+i);
+//						System.out.println("index:"+i);
 						compile(i+1);//编译 从[后的代码
-						//System.out.println((int)memory[tempPointer]);
+//						System.out.println((int)memory[tempPointer]);
 					}
 					//System.out.println("loop end");
 					i=endLoop;//将代码的读取位置移到]的下一位
@@ -101,7 +108,8 @@ public class ExecuteServiceImpl implements ExecuteService {
 					return "";
 			}
 		}
-		return ouputBuilder.toString();
+//		System.out.println(outputBuilder.toString());
+		return outputBuilder.toString();
 	}
 
 }

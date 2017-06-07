@@ -1,5 +1,7 @@
 package ui;
 
+import data.Temp;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import rmi.RemoteHelper;
@@ -15,9 +17,25 @@ public class MainWinController {
     public TextArea outputText;
 
     public void onOpenMenu(ActionEvent actionEvent) {
+        try {
+            String code = RemoteHelper.getInstance().getIOService().readFile(Temp.currentUser, "code");
+            codeText.setText(code);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     public void onSaveMenu(ActionEvent actionEvent) {
+        String code=codeText.getText();
+        if(code.equals("")){
+            codeText.setPromptText("You've coded nothing!!!");
+        }else{
+            try {
+                RemoteHelper.getInstance().getIOService().writeFile(code, Temp.currentUser,"code");
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void onExecuteMenu(ActionEvent actionEvent) {
@@ -38,12 +56,15 @@ public class MainWinController {
     }
 
     public void onExitMenu(ActionEvent actionEvent) {
+        Platform.exit();
     }
 
     public void onSelectAllMenu(ActionEvent actionEvent) {
+        codeText.selectAll();
     }
 
     public void onClearMenu(ActionEvent actionEvent) {
+        codeText.clear();
     }
 
     public void onAboutMenu(ActionEvent actionEvent) {

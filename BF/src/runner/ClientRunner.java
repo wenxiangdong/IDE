@@ -46,10 +46,11 @@ public class ClientRunner extends Application{
 	private void initGUI(){
 	}
 	
-	public void test(){
+	public  void test(){
 		try {
-//			System.out.println(remoteHelper.getUserService().login("admin", "123456a"));
-			System.out.println(remoteHelper.getIOService().writeFile("2", "admin", "testFile"));
+			System.out.println(RemoteHelper.getInstance().getExecuteService().execute(
+                    "++++++++++[>+++++++>++++++++++>+++>+<<<<-] >++.>+.+++++++..+++.>++.<<+++++++++++++++. >.+++.------.--------.>+.>.",
+                    ""));
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}

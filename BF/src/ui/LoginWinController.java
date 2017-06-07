@@ -1,5 +1,6 @@
 package ui;
 
+import data.Temp;
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -24,6 +25,7 @@ public class LoginWinController {
 
                     if(RemoteHelper.getInstance().getUserService().login(username,password)){
                     //new a window
+                        Temp.currentUser=username;
                         usernameText.getScene().getWindow().hide();
                         new MainWin();
                     }else{
