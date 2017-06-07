@@ -1,0 +1,22 @@
+.root{
+    -fx-background-image: url(img/bg1.png);
+}
+.button{
+    -fx-background-color: rgba(255,255,255,0.5);
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+    -fx-text-fill: black;
+}
+.button:hover{
+    -fx-background-color: rgba(255,255,255,0.8);
+}
+.button:pressed{
+    -fx-background-color: rgba(255,255,255,0.5);
+}
+.text-field,.password-field{
+    -fx-text-fill: white;;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+}
