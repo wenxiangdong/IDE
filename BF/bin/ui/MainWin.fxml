@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ui.MainWinController">
+  <children>
+    <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Open" onAction="#onOpenMenu" />
+            <MenuItem mnemonicParsing="false" text="Save" onAction="#onSaveMenu"/>
+            <MenuItem mnemonicParsing="false" text="Execute" onAction="#onExecuteMenu"/>
+            <MenuItem mnemonicParsing="false" text="Exit" onAction="#onExitMenu"/>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit" >
+          <items>
+            <MenuItem mnemonicParsing="false" text="Select All" onAction="#onSelectAllMenu" />
+            <MenuItem mnemonicParsing="false" text="Clear" onAction="#onClearMenu"/>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" onAction="#onAboutMenu"/>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.7007042253521126" focusTraversable="true" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <TextArea fx:id="codeText" prefHeight="375.0" prefWidth="678.0" promptText="Coding here" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                  <children>
+                    <TextArea fx:id="inputText" prefWidth="200.0" promptText="Input" wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                  <children>
+                    <TextArea fx:id="outputText" prefWidth="200.0" promptText="Output" wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

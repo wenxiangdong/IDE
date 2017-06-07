@@ -24,11 +24,12 @@ public class LoginWinController {
 
                     if(RemoteHelper.getInstance().getUserService().login(username,password)){
                     //new a window
-
+                        usernameText.getScene().getWindow().hide();
+                        new MainWin();
                     }else{
                         passwordText.clear();
                         passwordText.setPromptText("密码有误");
-                        passwordText.requestFocus();
+//                        passwordText.requestFocus();
                     }
                 }else{
                     usernameText.clear();
