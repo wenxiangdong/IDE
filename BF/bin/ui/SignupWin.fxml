@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane fx:id="root"  id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ui.SignupWinController">
+  <children>
+    <VBox layoutX="66.0" prefHeight="221.0" prefWidth="268.0" spacing="40.0" AnchorPane.topAnchor="200.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" spacing="20.0">
+          <children>
+            <TextField fx:id="usernameText" minHeight="40.0" prefWidth="200.0" promptText="用户名" />
+            <PasswordField fx:id="passwordText" minHeight="40.0" prefWidth="200.0" promptText="密码" />
+          </children>
+        </VBox>
+        <VBox id="VBox" alignment="CENTER_RIGHT" spacing="15.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#onSignBtnClick" prefHeight="40.0" prefWidth="271.0" text="SIGN UP" />
+            <Button mnemonicParsing="false" onAction="#onBackBtnClick" prefHeight="40.0" prefWidth="271.0" text="BACK" />
+          </children>
+        </VBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

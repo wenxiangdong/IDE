@@ -20,3 +20,6 @@
     -fx-border-width: 2;
     -fx-border-radius: 20;
 }
+#signUp{
+    -fx-cursor: hand;
+}

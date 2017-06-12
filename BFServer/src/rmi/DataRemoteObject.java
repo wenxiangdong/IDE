@@ -31,9 +31,9 @@ public class DataRemoteObject extends UnicastRemoteObject implements IOService, 
 	}
 
 	@Override
-	public String readFile(String userId, String fileName) throws RemoteException{
+	public String readFile( String fileName) throws RemoteException{
 		// TODO Auto-generated method stub
-		return iOService.readFile(userId, fileName);
+		return iOService.readFile(fileName);
 	}
 
 	@Override

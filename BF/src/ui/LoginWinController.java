@@ -2,10 +2,16 @@ package ui;
 
 import data.Temp;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.*;
 import rmi.RemoteHelper;
 
+import java.io.IOException;
 import java.rmi.RemoteException;
 
 /**
@@ -14,6 +20,7 @@ import java.rmi.RemoteException;
 public class LoginWinController {
     public TextField usernameText;
     public PasswordField passwordText;
+    public AnchorPane root;
 
     public void onLoginBtnClick(ActionEvent actionEvent) {
         String username=usernameText.getText();
@@ -37,6 +44,7 @@ public class LoginWinController {
                     usernameText.clear();
                     usernameText.setPromptText("该用户不存在");
                     passwordText.clear();
+                    passwordText.setPromptText("");
                 }
 
 
@@ -47,6 +55,18 @@ public class LoginWinController {
             passwordText.clear();
             usernameText.clear();
             usernameText.setPromptText("用户名不能为空");
+        }
+    }
+
+    public void onSignUpLabelClicked(MouseEvent mouseEvent) {
+        try {
+            AnchorPane root2=FXMLLoader.load(getClass().getResource("SignupWin.fxml"));
+            Scene scene=root.getScene();
+            scene.setRoot(root2);
+            scene.getStylesheets().add(getClass().getResource("SignupWin.css").toExternalForm());
+            System.out.println("change");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

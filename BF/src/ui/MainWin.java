@@ -22,6 +22,7 @@ public class MainWin extends Stage{
         }
 
         Scene scene=new Scene(root,800,600);
+        scene.getStylesheets().add(getClass().getResource("MainWin.css").toExternalForm());
 
         this.setScene(scene);
         this.initStyle(StageStyle.TRANSPARENT);

@@ -27,10 +27,12 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void add(String username, String password) throws RemoteException {
 		userInfo.add(username, password);
+		userInfo.print();
 	}
 
 	@Override
 	public boolean isExisting(String username) throws RemoteException {
+		userInfo.print();
 		return userInfo.search(username);
 	}
 

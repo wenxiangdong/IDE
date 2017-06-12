@@ -1,16 +1,18 @@
 package serviceImpl;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import service.IOService;
+import sun.rmi.runtime.NewThreadAction;
 
 public class IOServiceImpl implements IOService{
 	
 	@Override
 	public boolean writeFile(String file, String userId, String fileName) {
-		File f = new File(userId + "_" + fileName);
+		String path="D:/软工/GitHub/IDE/File/";
+		File f = new File(path+userId + "_" + fileName);
 		try {
 			FileWriter fw = new FileWriter(f, false);
 			fw.write(file);
@@ -24,15 +26,44 @@ public class IOServiceImpl implements IOService{
 	}
 
 	@Override
-	public String readFile(String userId, String fileName) {
+	public String readFile(String fileName) {
 		// TODO Auto-generated method stub
-		return "OK";
+		StringBuilder data=new StringBuilder();
+		String line;
+		try {
+			BufferedReader reader=new BufferedReader(new FileReader(fileName));
+			while ((line=reader.readLine())!=null){
+				data.append(line);
+
+			}
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return data.toString();
 	}
 
 	@Override
 	public String readFileList(String userId) {
-		// TODO Auto-generated method stub
-		return "OK";
+		// TODO Auto-generated method stu
+		StringBuilder list=new StringBuilder();
+		String path="D:/软工/GitHub/IDE/File";
+		File root=new File(path);
+		File[] files=root.listFiles();
+		for(File file:files){
+			if(file.getName().contains(userId+"_code")){
+				list.append(file.toPath());
+				list.append(";");
+			}
+		}
+		if(list.toString().equals("")){
+			return "";
+		}else {
+			return list.substring(0,list.length()-1);
+		}
+
 	}
 	
 }

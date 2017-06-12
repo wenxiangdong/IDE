@@ -95,7 +95,7 @@ public class ExecuteServiceImpl implements ExecuteService {
 							}
 						}
 					}
-					while (memory[tempPointer]!='\0'){
+					while (memory[this.pointer]!='\0'){
 //						System.out.println("index:"+i);
 						compile(i+1);//编译 从[后的代码
 //						System.out.println((int)memory[tempPointer]);

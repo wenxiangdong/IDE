@@ -1,6 +1,7 @@
 package data;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.util.HashMap;
 
 /**
@@ -26,7 +27,7 @@ public class UserInfo implements Serializable {
      */
     public void add(String key,String value){
         users.put(key, value);
-        writeUserInfo();
+        writeUserInfo();//加完后及时写回
     }
     /*
     查找用户名是否存在
@@ -48,7 +49,8 @@ public class UserInfo implements Serializable {
      */
     public  void writeUserInfo(){
         try {
-            File file = new File("UserInfo");
+            String path="D:/软工/GitHub/IDE/File/UserInfo";
+            File file = new File(path);
             ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream(file));
             outputStream.writeObject(users);
             outputStream.flush();
@@ -63,7 +65,9 @@ public class UserInfo implements Serializable {
      */
     public  void   readUserInfo(){
         try {
-            File file = new File("UserInfo");
+//            System.out.println("读取序列化文件");
+            String path="D:/软工/GitHub/IDE/File/UserInfo";
+            File file = new File(path);
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
             users = (HashMap<String, String>) inputStream.readObject();
         } catch (IOException e) {
