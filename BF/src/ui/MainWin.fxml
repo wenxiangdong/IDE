@@ -61,7 +61,11 @@
             </AnchorPane>
           </items>
         </SplitPane>
-        <Label fx:id="noticeLabel" text="IDE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" />
+        <HBox id="HBox" fx:id="noticeBox" alignment="CENTER" layoutX="10.0" layoutY="580.0" spacing="15.0">
+          <children>
+            <Label fx:id="noticeLabel" text="IDE" />
+          </children>
+        </HBox>
       </children>
     </AnchorPane>
   </children>

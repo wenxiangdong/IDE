@@ -5,4 +5,5 @@ package data;
  */
 public class Temp {
     public static String currentUser="";
+    public static String lastCodes="";
 }
