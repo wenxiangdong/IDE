@@ -1,5 +1,6 @@
 package ui;
 
+import data.Mode;
 import data.Temp;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -8,16 +9,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import rmi.RemoteHelper;
 import service.IOService;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.rmi.RemoteException;
-import java.security.Key;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,12 +33,20 @@ public class MainWinController {
     public HBox noticeBox;
     public Label undo=new Label("undo");
 
-    @FXML
-    void initialize() throws RemoteException {
 
+
+    /*
+    检查版本
+     */
+    void getVersions(){
         IOService ioService=RemoteHelper.getInstance().getIOService();
         //检查版本号
-        String temp=ioService.readFileList(Temp.currentUser);
+        String temp= null;
+        try {
+            temp = ioService.readFileList(Temp.currentUser);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         String[] fileList=temp.split(";");
         if(fileList.length==0) return;
 
@@ -54,6 +59,8 @@ public class MainWinController {
                     System.out.println(file);
                     String data=ioService.readFile(file);
                     codeText.setText(data);
+                    inputText.clear();
+                    outputText.clear();
                     changeNotice("Open file:"+name+" successfully!",false);
 
                 } catch (RemoteException e1) {
@@ -62,6 +69,12 @@ public class MainWinController {
             });
             versionsMenu.getItems().add(item);
         }
+    }
+
+    @FXML
+    void initialize() throws RemoteException {
+
+        getVersions();
 
         //undo按钮
         undo.setUnderline(true);
@@ -69,15 +82,7 @@ public class MainWinController {
         undo.setOnMouseClicked(e->{
             codeText.setText(Temp.lastCodes);
         });
-    }
-
-    public void onOpenMenu(ActionEvent actionEvent) {
-//        try {
-//            String code = RemoteHelper.getInstance().getIOService().readFile(Temp.currentUser, "code");
-//            codeText.setText(code);
-//        } catch (RemoteException e) {
-//            e.printStackTrace();
-//        }
+        noticeLabel.setText(Temp.currentMode.toString());
     }
 
     public void onSaveMenu(ActionEvent actionEvent) {
@@ -91,9 +96,15 @@ public class MainWinController {
                 Date now=new Date();
                 String version=df.format(now);
 
-                RemoteHelper.getInstance().getIOService().writeFile(code, Temp.currentUser,"code_"+version);
+                String ext="."+Temp.currentMode.toString().toLowerCase();
+
+                RemoteHelper.getInstance().getIOService().writeFile(code, Temp.currentUser,"code_"+version+ext);
 
                 changeNotice("Save successfully!",false);
+                //重新检查版本
+                versionsMenu.getItems().clear();
+                getVersions();
+
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
@@ -103,15 +114,29 @@ public class MainWinController {
     public void onExecuteMenu(ActionEvent actionEvent) {
         String code=codeText.getText();
         String input=inputText.getText();
+        System.out.println(input);
         String output="";
         if(code.equals("")){
             codeText.setPromptText("You've coded nothing!!!");
         }else{
-            try {
-                output=RemoteHelper.getInstance().getExecuteService().execute(code,input);
-            } catch (RemoteException e) {
-                e.printStackTrace();
+            switch (Temp.currentMode){
+                case BF:
+                    try {
+                        output=RemoteHelper.getInstance().getBFService().execute(code,input);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case Ook:
+                    try {
+                        code = RemoteHelper.getInstance().getOokService().translate(code,input);
+                        System.out.println("after change:"+code);
+                        output =RemoteHelper.getInstance().getBFService().execute(code, input);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
             }
+
 
             outputText.setText(output);
 
@@ -134,10 +159,12 @@ public class MainWinController {
     }
 
     public void onAboutMenu(ActionEvent actionEvent) {
+//        codeText.getScene().getWindow().hide();
+        new AboutWin();
     }
 
     public void changeNotice(String msg,boolean undoable){
-        String origin="IDE";
+        String origin=Temp.currentMode.toString();
         noticeLabel.setText(msg);
         if(undoable){
             noticeBox.getChildren().add(undo);
@@ -154,5 +181,18 @@ public class MainWinController {
                 });
             }
         },3000);
+    }
+
+    public void onModeSwiftClicked(ActionEvent actionEvent) {
+        MenuItem menuItem=(MenuItem)actionEvent.getSource();
+        if(Temp.currentMode== Mode.BF){
+            Temp.currentMode=Mode.Ook;
+            menuItem.setText("Swift to BF Mode");
+            changeNotice("You are now in Ook Mode",false);
+        }else{
+            Temp.currentMode= Mode.BF;
+            menuItem.setText("Swift to Ook Mode");
+            changeNotice("You are now in Bf Mode ",false);
+        }
     }
 }

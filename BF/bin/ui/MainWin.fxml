@@ -14,7 +14,6 @@
           <menus>
             <Menu mnemonicParsing="false" text="File">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#onOpenMenu" text="Open" />
                 <MenuItem mnemonicParsing="false" onAction="#onSaveMenu" text="Save" />
                 <MenuItem mnemonicParsing="false" onAction="#onExecuteMenu" text="Execute" />
                 <MenuItem mnemonicParsing="false" onAction="#onExitMenu" text="Exit" />
@@ -27,6 +26,11 @@
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Versions" fx:id="versionsMenu" />
+            <Menu mnemonicParsing="false" text="Mode">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Swift to Ook Mode" onAction="#onModeSwiftClicked"/>
+              </items>
+            </Menu>
             <Menu mnemonicParsing="false" text="Help">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#onAboutMenu" text="About" />

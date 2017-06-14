@@ -2,8 +2,9 @@ package rmi;
 
 import java.rmi.Remote;
 
-import service.ExecuteService;
+import service.BFService;
 import service.IOService;
+import service.OokService;
 import service.UserService;
 
 public class RemoteHelper {
@@ -28,7 +29,10 @@ public class RemoteHelper {
 		return (UserService)remote;
 	}
 
-	public ExecuteService getExecuteService(){
-		return (ExecuteService)remote;
+	public BFService getBFService(){
+		return (BFService)remote;
+	}
+	public OokService getOokService(){
+		return (OokService)remote;
 	}
 }

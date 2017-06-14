@@ -6,4 +6,5 @@ package data;
 public class Temp {
     public static String currentUser="";
     public static String lastCodes="";
+    public static Mode currentMode=Mode.BF;
 }

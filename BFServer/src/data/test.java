@@ -13,6 +13,10 @@ public class test {
     public static void main(String[] args) {
 
 
+        String s="111\n";
+        char[] chars = s.toCharArray();
+        System.out.println(chars.length);
+
 //        writeUserInfo();
 //
 //        UserInfo userInfo=new UserInfo();
@@ -25,27 +29,16 @@ public class test {
 
 
 
-        String path="D:/软工/GitHub/IDE/File";
-        File root=new File(path);
-        File[] files=root.listFiles();
-        System.out.println("输出文件列表");
-        for(File s:files){
-            System.out.println(s.toString());
-        }
+//        String path="D:/软工/GitHub/IDE/File";
+//        File root=new File(path);
+//        File[] files=root.listFiles();
+//        System.out.println("输出文件列表");
+//        for(File s:files){
+//            System.out.println(s.toString());
+//        }
 
     }
     public static  void writeUserInfo(){
-        try {
-            String path="D:/软工/GitHub/IDE/File/UserInfo";
-            File file = new File(path);
-            ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream(file));
-            HashMap<String,String> users=new HashMap<>();
-            outputStream.writeObject(users);
-            outputStream.flush();
-            outputStream.close();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
