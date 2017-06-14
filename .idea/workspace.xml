@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3762f23-cdd2-4460-8a7f-e4a0592cbf28" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BF/src/service/OokService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BF/src/ui/AboutWin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BFServer/src/service/OokService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BF/bin/service/ExecuteService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BF/bin/ui/img/bg3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BF/src/ui/img/bg3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BFServer/bin/service/ExecuteService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BFServer/bin/serviceImpl/ExecuteServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/File/eric_code_1123444" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/File/eric_code_1234566" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/data/Temp.class" afterPath="$PROJECT_DIR$/BF/bin/data/Temp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/rmi/RemoteHelper.class" afterPath="$PROJECT_DIR$/BF/bin/rmi/RemoteHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/runner/ClientRunner.class" afterPath="$PROJECT_DIR$/BF/bin/runner/ClientRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/MainWinController$1.class" afterPath="$PROJECT_DIR$/BF/bin/ui/MainWinController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/MainWinController.class" afterPath="$PROJECT_DIR$/BF/bin/ui/MainWinController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/SignupWinController.class" afterPath="$PROJECT_DIR$/BF/bin/ui/SignupWinController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/img/bg1.jpg" afterPath="$PROJECT_DIR$/BF/bin/ui/img/bg1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/ui/img/bg1.jpg" afterPath="$PROJECT_DIR$/BF/src/ui/img/bg1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFServer/bin/data/test.class" afterPath="$PROJECT_DIR$/BFServer/bin/data/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFServer/bin/rmi/DataRemoteObject.class" afterPath="$PROJECT_DIR$/BFServer/bin/rmi/DataRemoteObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/MainWin.fxml" afterPath="$PROJECT_DIR$/BF/bin/ui/MainWin.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/data/Temp.java" afterPath="$PROJECT_DIR$/BF/src/data/Temp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/rmi/RemoteHelper.java" afterPath="$PROJECT_DIR$/BF/src/rmi/RemoteHelper.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BF/bin/ui/Dialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BF/bin/ui/img/bg2.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/runner/ClientRunner.java" afterPath="$PROJECT_DIR$/BF/src/runner/ClientRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" afterPath="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/ui/MainWinController.java" afterPath="$PROJECT_DIR$/BF/src/ui/MainWinController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/ui/SignupWinController.java" afterPath="$PROJECT_DIR$/BF/src/ui/SignupWinController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFServer/src/data/test.java" afterPath="$PROJECT_DIR$/BFServer/src/data/test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFServer/src/rmi/DataRemoteObject.java" afterPath="$PROJECT_DIR$/BFServer/src/rmi/DataRemoteObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/File/UserInfo" afterPath="$PROJECT_DIR$/File/UserInfo" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/BF/src/service/ExecuteService.java" afterPath="$PROJECT_DIR$/BF/src/service/BFService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/BFServer/src/service/ExecuteService.java" afterPath="$PROJECT_DIR$/BFServer/src/service/BFService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/BFServer/src/serviceImpl/ExecuteServiceImpl.java" afterPath="$PROJECT_DIR$/BFServer/src/serviceImpl/BFServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/BF/bin/" />
     <ignored path="$PROJECT_DIR$/BFServer/bin/" />
@@ -65,8 +34,8 @@
       <file leaf-file-name="ClientRunner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BF/src/runner/ClientRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+            <state relative-caret-position="137">
+              <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
               <folding>
                 <element signature="method#main#0;class#ClientRunner#0" expanded="true" />
                 <element signature="method#linkToServer#0;class#ClientRunner#0" expanded="true" />
@@ -110,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWin.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainWin.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWin.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
-              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -126,12 +95,13 @@
       <file leaf-file-name="MainWinController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWinController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-41">
-              <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+            <state relative-caret-position="96">
+              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getVersions#0;class#MainWinController#0" expanded="true" />
                 <element signature="method#initialize#0;class#MainWinController#0" expanded="true" />
+                <element signature="method#onSaveMenu#0;class#MainWinController#0" expanded="true" />
                 <element signature="method#onAboutMenu#0;class#MainWinController#0" expanded="true" />
                 <element signature="method#changeNotice#0;class#MainWinController#0" expanded="true" />
               </folding>
@@ -139,12 +109,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignupWinController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SignupWinController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BF/src/ui/SignupWinController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
+            <state relative-caret-position="-9">
               <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-              <folding />
+              <folding>
+                <element signature="method#changeRoot#0;class#SignupWinController#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,11 +136,21 @@
       <file leaf-file-name="BFServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/BFServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="174">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="method#compile#0;class#BFServiceImpl#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataRemoteObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BFServer/src/rmi/DataRemoteObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -226,11 +208,11 @@
         <option value="$PROJECT_DIR$/BF/src/ui/MainWin.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/AboutWin.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/MainWin.css" />
-        <option value="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" />
-        <option value="$PROJECT_DIR$/BF/src/ui/MainWinController.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/SignupWinController.java" />
-        <option value="$PROJECT_DIR$/BF/src/runner/ClientRunner.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/Dialog.java" />
+        <option value="$PROJECT_DIR$/BF/src/runner/ClientRunner.java" />
+        <option value="$PROJECT_DIR$/BF/src/ui/MainWinController.java" />
+        <option value="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" />
       </list>
     </option>
   </component>
@@ -271,106 +253,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serviceImpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rmi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="BF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -406,32 +288,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -448,42 +304,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="runner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rmi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1051,12 +871,12 @@
       <workItem from="1497082319690" duration="13837000" />
       <workItem from="1497272241676" duration="8879000" />
       <workItem from="1497320567994" duration="1930000" />
-      <workItem from="1497449754023" duration="2281000" />
+      <workItem from="1497449754023" duration="2983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55352000" />
+    <option name="totallyTimeSpent" value="56054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1080,12 +900,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2827027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2827027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1298,25 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BFServer/src/rmi/DataRemoteObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="method#DataRemoteObject#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#writeFile#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#readFile#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#readFileList#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#login#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#logout#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#add#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#isExisting#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#execute#0;class#DataRemoteObject#0" expanded="false" />
-            <element signature="method#translate#0;class#DataRemoteObject#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BFServer/src/service/BFService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -1346,7 +1147,7 @@
         <state relative-caret-position="352">
           <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1356,8 +1157,8 @@
         <state relative-caret-position="260">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#translate#0;class#OokServiceImpl#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#translate#0;class#OokServiceImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1367,7 +1168,7 @@
         <state relative-caret-position="338">
           <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding>
-            <element signature="method#writeUserInfo#0;class#test#0" expanded="true" />
+            <element signature="method#writeUserInfo#0;class#test#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1377,16 +1178,6 @@
         <state relative-caret-position="130">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/BFServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="method#compile#0;class#BFServiceImpl#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1418,31 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWin.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWinController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="85" column="5" lean-forward="true" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getVersions#0;class#MainWinController#0" expanded="true" />
-            <element signature="method#initialize#0;class#MainWinController#0" expanded="true" />
-            <element signature="method#onAboutMenu#0;class#MainWinController#0" expanded="true" />
-            <element signature="method#changeNotice#0;class#MainWinController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/control/Alert.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1464,18 +1230,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BF/src/ui/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BF/src/ui/SignupWinController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
+        <state relative-caret-position="-9">
           <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="method#changeRoot#0;class#SignupWinController#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BF/src/runner/ClientRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        <state relative-caret-position="137">
+          <caret line="20" column="60" lean-forward="false" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
           <folding>
             <element signature="method#main#0;class#ClientRunner#0" expanded="true" />
             <element signature="method#linkToServer#0;class#ClientRunner#0" expanded="true" />
@@ -1484,12 +1260,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BF/src/ui/Dialog.java">
+    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/BFServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="174">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="method#compile#0;class#BFServiceImpl#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BFServer/src/rmi/DataRemoteObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWinController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getVersions#0;class#MainWinController#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainWinController#0" expanded="true" />
+            <element signature="method#onSaveMenu#0;class#MainWinController#0" expanded="true" />
+            <element signature="method#onAboutMenu#0;class#MainWinController#0" expanded="true" />
+            <element signature="method#changeNotice#0;class#MainWinController#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWin.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>

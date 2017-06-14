@@ -19,7 +19,6 @@ public class ClientRunner extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		new Dialog("Sign up successfully!").showAndWait();
 		new LoginWin();
 	}
 

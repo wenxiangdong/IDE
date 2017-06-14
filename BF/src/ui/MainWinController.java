@@ -89,6 +89,7 @@ public class MainWinController {
         String code=codeText.getText();
         if(code.equals("")){
             codeText.setPromptText("You've coded nothing!!!");
+            changeNotice("Failed: You've coded nothing!!!",false);
         }else{
             try {
                 //用当前时间作为版本号
@@ -118,13 +119,14 @@ public class MainWinController {
         String output="";
         if(code.equals("")){
             codeText.setPromptText("You've coded nothing!!!");
+            changeNotice("Failed: You've coded nothing!!!",false);
         }else{
             switch (Temp.currentMode){
                 case BF:
                     try {
                         output=RemoteHelper.getInstance().getBFService().execute(code,input);
                     } catch (RemoteException e) {
-                        e.printStackTrace();
+                       outputText.setText(e.toString());
                     }
                     break;
                 case Ook:
