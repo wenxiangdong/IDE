@@ -49,7 +49,7 @@ public class UserInfo implements Serializable {
      */
     public  void writeUserInfo(){
         try {
-            String path="D:/软工/GitHub/IDE/File/UserInfo";
+            String path="File/UserInfo";
             File file = new File(path);
             ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream(file));
             outputStream.writeObject(users);
@@ -66,7 +66,7 @@ public class UserInfo implements Serializable {
     public  void   readUserInfo(){
         try {
 //            System.out.println("读取序列化文件");
-            String path="D:/软工/GitHub/IDE/File/UserInfo";
+            String path="File/UserInfo";
             File file = new File(path);
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
             users = (HashMap<String, String>) inputStream.readObject();

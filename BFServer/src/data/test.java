@@ -1,9 +1,6 @@
 package data;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.HashMap;
 
 /**
@@ -12,30 +9,29 @@ import java.util.HashMap;
 public class test {
     public static void main(String[] args) {
 
+        HashMap<String ,String> users;
+        String path="File/UserInfo";
+        File file = new File(path);
+        ObjectInputStream inputStream = null;
+        try {
+            inputStream = new ObjectInputStream(new FileInputStream(file));
+            users = (HashMap<String, String>) inputStream.readObject();
 
-        String s="111\n";
-        char[] chars = s.toCharArray();
-        System.out.println(chars.length);
+            users.clear();
+            users.put("eric","1997");
 
-//        writeUserInfo();
-//
-//        UserInfo userInfo=new UserInfo();
-//        userInfo.add("admin","123456");
-//        userInfo.print();
-//        userInfo.writeUserInfo();
-//        userInfo.readUserInfo();
-//        System.out.println("读取成功");
-//        userInfo.print();
+            ObjectOutputStream outputStream=new ObjectOutputStream(new FileOutputStream(file));
+            outputStream.writeObject(users);
+            outputStream.flush();
+            outputStream.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
-
-//        String path="D:/软工/GitHub/IDE/File";
-//        File root=new File(path);
-//        File[] files=root.listFiles();
-//        System.out.println("输出文件列表");
-//        for(File s:files){
-//            System.out.println(s.toString());
-//        }
 
     }
     public static  void writeUserInfo(){

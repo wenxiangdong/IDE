@@ -1,12 +1,12 @@
 //请不要修改本文件名
 package serviceImpl;
 
-import service.BFService;
+import service.ExecuteService;
 
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-public class BFServiceImpl implements BFService {
+public class BFServiceImpl implements ExecuteService {
 
 	int inputPointer=0;
 	int pointer=0;//指针

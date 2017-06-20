@@ -6,5 +6,6 @@ package data;
 public class Temp {
     public static String currentUser="";
     public static String lastCodes="";
+    public static String nextCodes="";
     public static Mode currentMode=Mode.BF;
 }

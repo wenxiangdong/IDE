@@ -5,10 +5,8 @@ import data.Temp;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import rmi.RemoteHelper;
@@ -187,14 +185,39 @@ public class MainWinController {
 
     public void onModeSwiftClicked(ActionEvent actionEvent) {
         MenuItem menuItem=(MenuItem)actionEvent.getSource();
-        if(Temp.currentMode== Mode.BF){
-            Temp.currentMode=Mode.Ook;
-            menuItem.setText("Swift to BF Mode");
-            changeNotice("You are now in Ook Mode",false);
-        }else{
-            Temp.currentMode= Mode.BF;
-            menuItem.setText("Swift to Ook Mode");
-            changeNotice("You are now in Bf Mode ",false);
+        String mode=menuItem.getText().split(" ")[0];
+        switch (mode){
+            case "BF":
+                Temp.currentMode= Mode.BF;
+                break;
+            case "Ook":
+                Temp.currentMode=Mode.Ook;
+                break;
         }
+
+        changeNotice("You are now in "+mode+" Mode",false);
+//        if(Temp.currentMode== Mode.BF){
+//            Temp.currentMode=Mode.Ook;
+//            menuItem.setText("Swift to BF Mode");
+//            changeNotice("You are now in Ook Mode",false);
+//        }else{
+//            Temp.currentMode= Mode.BF;
+//            menuItem.setText("Swift to Ook Mode");
+//            changeNotice("You are now in Bf Mode ",false);
+//        }
+    }
+
+    public void onCodeTextMouseClicked(MouseEvent mouseEvent) {
+        Temp.lastCodes=codeText.getText();
+    }
+
+    public void onUndoMenu(ActionEvent actionEvent) {
+        Temp.nextCodes=codeText.getText();
+        codeText.setText(Temp.lastCodes);
+//        codeText.requestFocus();
+    }
+
+    public void onRedoMenu(ActionEvent actionEvent) {
+        codeText.setText(Temp.nextCodes);
     }
 }

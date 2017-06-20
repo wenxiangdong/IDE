@@ -1,5 +1,6 @@
 package serviceImpl;
 
+import java.io.File;
 import java.rmi.RemoteException;
 
 import data.UserInfo;
@@ -28,6 +29,8 @@ public class UserServiceImpl implements UserService{
 	public void add(String username, String password) throws RemoteException {
 		userInfo.add(username, password);
 		userInfo.print();
+		madeDirectory("File/"+username);
+
 	}
 
 	@Override
@@ -36,5 +39,10 @@ public class UserServiceImpl implements UserService{
 		return userInfo.search(username);
 	}
 
+	boolean madeDirectory(String path){
+		File dir=new File(path);
+		dir.mkdir();
+		return false;
+	}
 
 }

@@ -24,7 +24,7 @@ public class ClientRunner extends Application{
 
 	public static void main(String[] args) {
 		launch();
-		new ClientRunner().test();
+//		new ClientRunner().test();
 //		new ClientRunner().test();
 	}
 
@@ -56,7 +56,7 @@ public class ClientRunner extends Application{
 					"Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook.Ook!Ook.",
 					""),""));
 			System.out.println(RemoteHelper.getInstance().getBFService().execute(",>++++++[<-------->-],,[<+>-],<.>.","4+3\n"));
-
+			RemoteHelper.getInstance().getUserService().add("Test","");
 
 
 		} catch (RemoteException e) {

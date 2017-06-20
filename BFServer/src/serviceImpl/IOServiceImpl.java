@@ -11,7 +11,7 @@ public class IOServiceImpl implements IOService{
 	
 	@Override
 	public boolean writeFile(String file, String userId, String fileName) {
-		String path="D:/软工/GitHub/IDE/File/";
+		String path="File/"+userId+"/";
 		File f = new File(path+userId + "_" + fileName);
 		try {
 			FileWriter fw = new FileWriter(f, false);
@@ -49,7 +49,7 @@ public class IOServiceImpl implements IOService{
 	public String readFileList(String userId) {
 		// TODO Auto-generated method stu
 		StringBuilder list=new StringBuilder();
-		String path="D:/软工/GitHub/IDE/File";
+		String path="File/"+userId;
 		File root=new File(path);
 		File[] files=root.listFiles();
 		for(File file:files){

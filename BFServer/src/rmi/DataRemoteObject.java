@@ -3,7 +3,7 @@ package rmi;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import service.BFService;
+import service.ExecuteService;
 import service.IOService;
 import service.OokService;
 import service.UserService;
@@ -12,14 +12,14 @@ import serviceImpl.IOServiceImpl;
 import serviceImpl.OokServiceImpl;
 import serviceImpl.UserServiceImpl;
 
-public class DataRemoteObject extends UnicastRemoteObject implements IOService, UserService, BFService,OokService {
+public class DataRemoteObject extends UnicastRemoteObject implements IOService, UserService, ExecuteService,OokService {
 	/**
 	 * 
 	 */
 	private static final long sr = 4029039744279087114L;
 	private IOService iOService;
 	private UserService userService;
-	private BFService BF;
+	private ExecuteService BF;
 	private OokService Ook;
 	protected DataRemoteObject() throws RemoteException {
 		iOService = new IOServiceImpl();
