@@ -6,12 +6,19 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import rmi.RemoteHelper;
 import service.IOService;
 
+import javax.xml.crypto.dsig.keyinfo.KeyValue;
+import java.awt.*;
 import java.rmi.RemoteException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -30,7 +37,7 @@ public class MainWinController {
     public Label noticeLabel;
     public HBox noticeBox;
     public Label undo=new Label("undo");
-
+    public MenuItem userNameMenu;
 
 
     /*
@@ -59,7 +66,7 @@ public class MainWinController {
                     codeText.setText(data);
                     inputText.clear();
                     outputText.clear();
-                    changeNotice("Open file:"+name+" successfully!",false);
+                    changeNotice("Open: "+name+" successfully!",false);
 
                 } catch (RemoteException e1) {
                     e1.printStackTrace();
@@ -79,8 +86,36 @@ public class MainWinController {
         undo.setTextFill(Color.BLUE);
         undo.setOnMouseClicked(e->{
             codeText.setText(Temp.lastCodes);
+            codeText.positionCaret(Temp.lastCodes.length());//光标移到最后
         });
         noticeLabel.setText(Temp.currentMode.toString());
+
+        //userNameMenu
+        userNameMenu.setText("Hello "+Temp.currentUser);
+
+        //codeText自动补全
+        codeText.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue.length()==0) return;
+            if(newValue.equals(oldValue)) return;
+            if(oldValue.length()<newValue.length()){
+
+                if(newValue.charAt(oldValue.length())=='['){
+                    codeText.appendText("]");
+                    //移动光标到[]中间
+                    try {
+                        Robot robot = new Robot();
+                        robot.keyPress(java.awt.event.KeyEvent.VK_LEFT);
+                        robot.keyRelease(java.awt.event.KeyEvent.VK_LEFT);
+                    } catch (AWTException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(newValue.charAt(newValue.length()-1)=='o'||newValue.charAt(newValue.length()-1)=='O'){
+                    String temp=codeText.getText();
+                    codeText.setText(temp.substring(0,temp.length()-1)+"Ook");
+                }
+            }
+        });
     }
 
     public void onSaveMenu(ActionEvent actionEvent) {
@@ -145,6 +180,11 @@ public class MainWinController {
     }
 
     public void onExitMenu(ActionEvent actionEvent) {
+        try {
+            RemoteHelper.getInstance().getUserService().logout(Temp.currentUser);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         Platform.exit();
     }
 
@@ -214,10 +254,23 @@ public class MainWinController {
     public void onUndoMenu(ActionEvent actionEvent) {
         Temp.nextCodes=codeText.getText();
         codeText.setText(Temp.lastCodes);
-//        codeText.requestFocus();
+        codeText.positionCaret(Temp.lastCodes.length());//光标移到最后
     }
 
     public void onRedoMenu(ActionEvent actionEvent) {
         codeText.setText(Temp.nextCodes);
+        codeText.selectRange(Temp.lastCodes.length(),Temp.nextCodes.length());
+    }
+
+    public void onLogoutMenu(ActionEvent actionEvent) {
+        try {
+            if(RemoteHelper.getInstance().getUserService().logout(Temp.currentUser)){
+                codeText.getScene().getWindow().hide();
+                new LoginWin();
+            }
+
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 }

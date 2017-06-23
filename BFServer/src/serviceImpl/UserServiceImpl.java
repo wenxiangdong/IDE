@@ -17,12 +17,18 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public boolean login(String username, String password) throws RemoteException {
-		return userInfo.checkPassword(username, password);
+		if(userInfo.checkPassword(username,password)){
+			if(userInfo.addOnLineUser(username)){
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	@Override
 	public boolean logout(String username) throws RemoteException {
-		return true;
+		return userInfo.removerOnLineUser(username);
 	}
 
 	@Override

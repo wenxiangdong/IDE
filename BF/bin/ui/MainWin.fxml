@@ -36,6 +36,8 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Help">
               <items>
+                <MenuItem fx:id="userNameMenu" mnemonicParsing="false" text="Hello User" />
+                <MenuItem mnemonicParsing="false" onAction="#onLogoutMenu"  text="Logout" />
                 <MenuItem mnemonicParsing="false" onAction="#onAboutMenu" text="About" />
               </items>
             </Menu>

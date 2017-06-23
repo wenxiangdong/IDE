@@ -6,7 +6,7 @@ import service.ExecuteService;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-public class BFServiceImpl implements ExecuteService {
+public class ExecuteServiceImpl implements ExecuteService {
 
 	int inputPointer=0;
 	int pointer=0;//指针
@@ -85,7 +85,7 @@ public class BFServiceImpl implements ExecuteService {
 
 //	public static void main(String[] args) {
 //		try {
-//			BFServiceImpl bfService=new BFServiceImpl();
+//			ExecuteServiceImpl bfService=new ExecuteServiceImpl();
 //			System.out.println(bfService.execute(
 //					"++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.",
 //					""));

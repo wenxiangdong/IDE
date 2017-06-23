@@ -7,7 +7,7 @@ import service.ExecuteService;
 import service.IOService;
 import service.OokService;
 import service.UserService;
-import serviceImpl.BFServiceImpl;
+import serviceImpl.ExecuteServiceImpl;
 import serviceImpl.IOServiceImpl;
 import serviceImpl.OokServiceImpl;
 import serviceImpl.UserServiceImpl;
@@ -24,7 +24,7 @@ public class DataRemoteObject extends UnicastRemoteObject implements IOService, 
 	protected DataRemoteObject() throws RemoteException {
 		iOService = new IOServiceImpl();
 		userService = new UserServiceImpl();
-		BF = new BFServiceImpl();
+		BF = new ExecuteServiceImpl();
 		Ook=new OokServiceImpl();
 	}
 

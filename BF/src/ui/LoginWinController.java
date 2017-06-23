@@ -37,7 +37,7 @@ public class LoginWinController {
                         new MainWin();
                     }else{
                         passwordText.clear();
-                        passwordText.setPromptText("密码有误");
+                        passwordText.setPromptText("用户名或密码有误");
 //                        passwordText.requestFocus();
                     }
                 }else{

@@ -2,7 +2,9 @@ package data;
 
 import java.io.*;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Created by wenxi on 2017/6/7.
@@ -11,7 +13,15 @@ import java.util.HashMap;
  */
 public class UserInfo implements Serializable {
 
-    private  HashMap<String,String> users;
+    private  HashMap<String,String> users;//所有用户信息
+    private HashSet<String> onLineUsers=new HashSet<>();//已登陆的用户
+
+    public boolean addOnLineUser(String username){
+        return onLineUsers.add(username);
+    }
+    public boolean removerOnLineUser(String username){
+        return onLineUsers.remove(username);
+    }
 
     public UserInfo(){
         readUserInfo();
