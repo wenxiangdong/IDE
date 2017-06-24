@@ -5,32 +5,34 @@ import data.Temp;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import rmi.RemoteHelper;
 import service.IOService;
 
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.awt.*;
 import java.rmi.RemoteException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 /**
  * Created by wenxi on 2017/6/7.
  */
 public class MainWinController {
     public TextArea codeText;
+
+
+    String code;
+    public String getCode(){
+        return this.code;
+    }
+
     public TextArea inputText;
     public TextArea outputText;
     public Menu versionsMenu;
@@ -52,27 +54,50 @@ public class MainWinController {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+        System.out.println(temp);
+        if(temp==null) return;
+        System.out.println("temp:"+temp);
         String[] fileList=temp.split(";");
         if(fileList.length==0) return;
 
+        HashMap<String,ArrayList<String>> map=new HashMap<>();
+//        HashSet<String> filenames=new HashSet<>();
+        //获取文件
         for(String file:fileList){
-            String[] patterns=file.split("code_");
-            String name=patterns[patterns.length-1];
-            MenuItem item=new MenuItem(name);
-            item.setOnAction(e->{
-                try {
-                    System.out.println(file);
-                    String data=ioService.readFile(file);
-                    codeText.setText(data);
-                    inputText.clear();
-                    outputText.clear();
-                    changeNotice("Open: "+name+" successfully!",false);
+            String[] patterns=file.split("_");
+            String[] pathPattern=patterns[0].split("\\\\");
+            String name=pathPattern[pathPattern.length-1];
+            String version=patterns[1];
+            if (!map.containsKey(name)) {
+                map.put(name, new ArrayList<>());
+            }
+            map.get(name).add(version);
+        }
 
-                } catch (RemoteException e1) {
-                    e1.printStackTrace();
-                }
-            });
-            versionsMenu.getItems().add(item);
+        for(String key:map.keySet()){
+            System.out.println("key:"+key);
+            Menu file=new Menu(key);
+            for(String version:map.get(key)){
+                System.out.println("version"+version);
+                MenuItem item=new MenuItem(version);
+                item.setOnAction(e->{
+                    try {
+                        String name=key+"_"+version;
+                        String path="File/"+Temp.currentUser+"/"+name;
+                        System.out.println(name);
+                        String data=ioService.readFile(path);
+                        codeText.setText(data);
+                        inputText.clear();
+                        outputText.clear();
+                        Temp.openingFile=key;
+                        changeNotice("Open: "+key+" successfully!",false);
+                    } catch (RemoteException e1) {
+                        e1.printStackTrace();
+                    }
+                });
+                file.getItems().add(item);
+            }
+            versionsMenu.getItems().add(file);
         }
     }
 
@@ -80,6 +105,10 @@ public class MainWinController {
     void initialize() throws RemoteException {
 
         getVersions();
+
+        //codeText无法使用
+        codeText.setEditable(false);
+        codeText.setPromptText("Please new a file or open one");
 
         //undo按钮
         undo.setUnderline(true);
@@ -94,28 +123,41 @@ public class MainWinController {
         userNameMenu.setText("Hello "+Temp.currentUser);
 
         //codeText自动补全
-        codeText.textProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue.length()==0) return;
-            if(newValue.equals(oldValue)) return;
-            if(oldValue.length()<newValue.length()){
-
-                if(newValue.charAt(oldValue.length())=='['){
-                    codeText.appendText("]");
-                    //移动光标到[]中间
-                    try {
-                        Robot robot = new Robot();
-                        robot.keyPress(java.awt.event.KeyEvent.VK_LEFT);
-                        robot.keyRelease(java.awt.event.KeyEvent.VK_LEFT);
-                    } catch (AWTException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if(newValue.charAt(newValue.length()-1)=='o'||newValue.charAt(newValue.length()-1)=='O'){
+        codeText.setOnKeyReleased(e->{
+            switch (e.getCode()){
+                case O:
                     String temp=codeText.getText();
                     codeText.setText(temp.substring(0,temp.length()-1)+"Ook");
-                }
+                    codeText.positionCaret(codeText.getText().length());
+                    break;
+                case OPEN_BRACKET:
+                    codeText.appendText("]");
+                    codeText.positionCaret(codeText.getText().length()-1);
+                    break;
             }
         });
+//        codeText.textProperty().addListener((observable, oldValue, newValue) -> {
+//            if(newValue.length()==0) return;
+//            if(newValue.equals(oldValue)) return;
+//            if(oldValue.length()<newValue.length()){
+//
+//                if(newValue.charAt(oldValue.length())=='['){
+//                    codeText.appendText("]");
+//                    //移动光标到[]中间
+//                    try {
+//                        Robot robot = new Robot();
+//                        robot.keyPress(java.awt.event.KeyEvent.VK_LEFT);
+//                        robot.keyRelease(java.awt.event.KeyEvent.VK_LEFT);
+//                    } catch (AWTException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//                if(newValue.charAt(newValue.length()-1)=='o'||newValue.charAt(newValue.length()-1)=='O'){
+//                    String temp=codeText.getText();
+//                    codeText.setText(temp.substring(0,temp.length()-1)+"Ook");
+//                }
+//            }
+//        });
     }
 
     public void onSaveMenu(ActionEvent actionEvent) {
@@ -124,24 +166,25 @@ public class MainWinController {
             codeText.setPromptText("You've coded nothing!!!");
             changeNotice("Failed: You've coded nothing!!!",false);
         }else{
-            try {
-                //用当前时间作为版本号
+            System.out.println("opening:"+Temp.openingFile);
+            if(Temp.openingFile==null) {
+                new SaveFileWin(code).showAndWait();
+            }else{
+                //时间作为版本号
                 DateFormat df=new SimpleDateFormat("yyyyMMddHHmmss");
                 Date now=new Date();
                 String version=df.format(now);
 
-                String ext="."+Temp.currentMode.toString().toLowerCase();
-
-                RemoteHelper.getInstance().getIOService().writeFile(code, Temp.currentUser,"code_"+version+ext);
-
-                changeNotice("Save successfully!",false);
-                //重新检查版本
-                versionsMenu.getItems().clear();
-                getVersions();
-
-            } catch (RemoteException e) {
-                e.printStackTrace();
+                try {
+                    RemoteHelper.getInstance().getIOService().writeFile(code,Temp.currentUser,Temp.openingFile+"_"+version);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
             }
+            //重新检查版本
+            versionsMenu.getItems().clear();
+            getVersions();
+
         }
     }
 
@@ -272,5 +315,16 @@ public class MainWinController {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+    }
+
+    public void onNewMenu(ActionEvent actionEvent) {
+        codeText.setEditable(true);
+        codeText.clear();
+        inputText.clear();
+        outputText.clear();
+        codeText.setPromptText("Coding here");
+        changeNotice("New a file successfully!",false);
+        Temp.openingFile=null;
+
     }
 }

@@ -1,6 +1,7 @@
 package serviceImpl;
 
 import java.io.*;
+import java.time.temporal.Temporal;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -12,7 +13,7 @@ public class IOServiceImpl implements IOService{
 	@Override
 	public boolean writeFile(String file, String userId, String fileName) {
 		String path="File/"+userId+"/";
-		File f = new File(path+userId + "_" + fileName);
+		File f = new File(path + fileName);
 		try {
 			FileWriter fw = new FileWriter(f, false);
 			fw.write(file);
@@ -53,13 +54,13 @@ public class IOServiceImpl implements IOService{
 		File root=new File(path);
 		File[] files=root.listFiles();
 		for(File file:files){
-			if(file.getName().contains(userId+"_code")){
+			//if(file.getName().contains(userId+"_code")){
 				list.append(file.toPath());
 				list.append(";");
-			}
+			//}
 		}
 		if(list.toString().equals("")){
-			return "";
+			return null;
 		}else {
 			return list.substring(0,list.length()-1);
 		}

@@ -8,4 +8,5 @@ public class Temp {
     public static String lastCodes="";
     public static String nextCodes="";
     public static Mode currentMode=Mode.BF;
+    public static String openingFile=null;
 }

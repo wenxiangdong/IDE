@@ -14,6 +14,7 @@
           <menus>
             <Menu mnemonicParsing="false" text="File">
               <items>
+                <MenuItem mnemonicParsing="false" onAction="#onNewMenu" text="New" />
                 <MenuItem mnemonicParsing="false" onAction="#onSaveMenu" text="Save" />
                 <MenuItem mnemonicParsing="false" onAction="#onExecuteMenu" text="Execute" />
                 <MenuItem mnemonicParsing="false" onAction="#onExitMenu" text="Exit" />
@@ -27,7 +28,7 @@
                 <MenuItem mnemonicParsing="false" onAction="#onClearMenu" text="Clear" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Versions" fx:id="versionsMenu" />
+            <Menu mnemonicParsing="false" text="Version" fx:id="versionsMenu" />
             <Menu mnemonicParsing="false" text="Mode">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#onModeSwiftClicked" text="BF Mode" />
@@ -36,8 +37,8 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Help">
               <items>
-                <MenuItem fx:id="userNameMenu" mnemonicParsing="false" text="Hello User" />
-                <MenuItem mnemonicParsing="false" onAction="#onLogoutMenu"  text="Logout" />
+                <MenuItem mnemonicParsing="false" text="Hello User" fx:id="userNameMenu" />
+                <MenuItem mnemonicParsing="false" onAction="#onLogoutMenu" text="Logout" />
                 <MenuItem mnemonicParsing="false" onAction="#onAboutMenu" text="About" />
               </items>
             </Menu>
