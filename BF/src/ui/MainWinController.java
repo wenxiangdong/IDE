@@ -86,6 +86,7 @@ public class MainWinController {
                         String path="File/"+Temp.currentUser+"/"+name;
                         System.out.println(name);
                         String data=ioService.readFile(path);
+                        codeText.setEditable(true);
                         codeText.setText(data);
                         inputText.clear();
                         outputText.clear();
@@ -136,28 +137,6 @@ public class MainWinController {
                     break;
             }
         });
-//        codeText.textProperty().addListener((observable, oldValue, newValue) -> {
-//            if(newValue.length()==0) return;
-//            if(newValue.equals(oldValue)) return;
-//            if(oldValue.length()<newValue.length()){
-//
-//                if(newValue.charAt(oldValue.length())=='['){
-//                    codeText.appendText("]");
-//                    //移动光标到[]中间
-//                    try {
-//                        Robot robot = new Robot();
-//                        robot.keyPress(java.awt.event.KeyEvent.VK_LEFT);
-//                        robot.keyRelease(java.awt.event.KeyEvent.VK_LEFT);
-//                    } catch (AWTException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//                if(newValue.charAt(newValue.length()-1)=='o'||newValue.charAt(newValue.length()-1)=='O'){
-//                    String temp=codeText.getText();
-//                    codeText.setText(temp.substring(0,temp.length()-1)+"Ook");
-//                }
-//            }
-//        });
     }
 
     public void onSaveMenu(ActionEvent actionEvent) {
@@ -318,12 +297,13 @@ public class MainWinController {
     }
 
     public void onNewMenu(ActionEvent actionEvent) {
+        Temp.lastCodes=codeText.getText();
         codeText.setEditable(true);
         codeText.clear();
         inputText.clear();
         outputText.clear();
         codeText.setPromptText("Coding here");
-        changeNotice("New a file successfully!",false);
+        changeNotice("New a file successfully!",true);
         Temp.openingFile=null;
 
     }
