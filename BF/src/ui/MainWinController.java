@@ -125,16 +125,22 @@ public class MainWinController {
 
         //codeText自动补全
         codeText.setOnKeyReleased(e->{
+            int pos=codeText.caretPositionProperty().intValue();
             switch (e.getCode()){
                 case O:
-                    String temp=codeText.getText();
-                    codeText.setText(temp.substring(0,temp.length()-1)+"Ook");
-                    codeText.positionCaret(codeText.getText().length());
+                    StringBuilder temp=new StringBuilder(codeText.getText());
+                    temp.replace(pos-1,pos,"Ook");
+//                    temp.insert(pos-1,"Ook");
+                    codeText.setText(temp.toString());
+                    codeText.positionCaret(pos+2);
                     break;
                 case OPEN_BRACKET:
-                    codeText.appendText("]");
-                    codeText.positionCaret(codeText.getText().length()-1);
+                    StringBuilder builder=new StringBuilder(codeText.getText());
+                    builder.insert(pos,']');
+                    codeText.setText(builder.toString());
+                    codeText.positionCaret(pos);
                     break;
+
             }
         });
     }

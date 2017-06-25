@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3762f23-cdd2-4460-8a7f-e4a0592cbf28" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BF/src/ui/SaveFileWin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BF/src/ui/SaveFileWinController.java" />
+    <list default="true" id="f3762f23-cdd2-4460-8a7f-e4a0592cbf28" name="Default" comment="codeText在打开一个文件后应该是editable(true)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/MainWinController$1.class" afterPath="$PROJECT_DIR$/BF/bin/ui/MainWinController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/MainWinController$2.class" afterPath="$PROJECT_DIR$/BF/bin/ui/MainWinController$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/bin/ui/MainWinController.class" afterPath="$PROJECT_DIR$/BF/bin/ui/MainWinController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/data/Temp.java" afterPath="$PROJECT_DIR$/BF/src/data/Temp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" afterPath="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BF/src/ui/MainWinController.java" afterPath="$PROJECT_DIR$/BF/src/ui/MainWinController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFServer/src/serviceImpl/IOServiceImpl.java" afterPath="$PROJECT_DIR$/BFServer/src/serviceImpl/IOServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java" afterPath="$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/BF/bin/" />
     <ignored path="$PROJECT_DIR$/BFServer/bin/" />
@@ -37,16 +36,16 @@
       <file leaf-file-name="MainWinController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWinController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="130" column="70" lean-forward="false" selection-start-line="130" selection-start-column="70" selection-end-line="130" selection-end-column="70" />
+            <state relative-caret-position="415">
+              <caret line="140" column="46" lean-forward="false" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#731#732#0" expanded="true" />
                 <element signature="e#763#764#0" expanded="true" />
-                <element signature="method#getVersions#0;class#MainWinController#0" expanded="true" />
                 <element signature="method#onExecuteMenu#0;class#MainWinController#0" expanded="true" />
                 <element signature="method#onUndoMenu#0;class#MainWinController#0" expanded="true" />
                 <element signature="method#onRedoMenu#0;class#MainWinController#0" expanded="true" />
+                <element signature="method#onNewMenu#0;class#MainWinController#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/BF/src/ui/SaveFileWinController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
-              <caret line="46" column="42" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="46" selection-end-column="42" />
+              <caret line="46" column="42" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="46" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1981#1982#0" expanded="true" />
@@ -96,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/BF/src/data/Temp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -105,11 +104,22 @@
       <file leaf-file-name="ExecuteServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/ExecuteServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="48" column="63" lean-forward="true" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+            <state relative-caret-position="59">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <element signature="method#execute#0;class#ExecuteServiceImpl#0" expanded="true" />
+                <element signature="method#compile#0;class#ExecuteServiceImpl#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OokServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-487">
+              <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,16 +143,6 @@
                 <element signature="method#writeFile#0;class#IOServiceImpl#0" expanded="true" />
                 <element signature="method#readFileList#0;class#IOServiceImpl#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginWinController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BF/src/ui/LoginWinController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -199,7 +199,6 @@
         <option value="$PROJECT_DIR$/BF/src/rmi/RemoteHelper.java" />
         <option value="$PROJECT_DIR$/BFServer/src/service/BFservice.java" />
         <option value="$PROJECT_DIR$/BFServer/src/service/BFService.java" />
-        <option value="$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java" />
         <option value="$PROJECT_DIR$/BFServer/src/serviceImpl/BFServiceImpl.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/AboutWin.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/SignupWinController.java" />
@@ -219,6 +218,7 @@
         <option value="$PROJECT_DIR$/BFServer/src/serviceImpl/IOServiceImpl.java" />
         <option value="$PROJECT_DIR$/BFServer/src/serviceImpl/ExecuteServiceImpl.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/MainWin.fxml" />
+        <option value="$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java" />
         <option value="$PROJECT_DIR$/BF/src/ui/MainWinController.java" />
       </list>
     </option>
@@ -295,42 +295,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BFServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -371,64 +335,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rmi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1003,12 +909,20 @@
       <workItem from="1497938462366" duration="1930000" />
       <workItem from="1498111577545" duration="1823000" />
       <workItem from="1498141617395" duration="46000" />
-      <workItem from="1498141735753" duration="15486000" />
+      <workItem from="1498141735753" duration="18629000" />
     </task>
+    <task id="LOCAL-00001" summary="codeText在打开一个文件后应该是editable(true)">
+      <created>1498321868961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1498321868961</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82731000" />
+    <option name="totallyTimeSpent" value="85874000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1020,7 +934,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="0" width="1924" height="1048" extended-state="1" />
+    <frame x="-9" y="0" width="1924" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1059,6 +973,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="codeText在打开一个文件后应该是editable(true)" />
+    <option name="LAST_COMMIT_MESSAGE" value="codeText在打开一个文件后应该是editable(true)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1214,13 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BF/src/ui/AboutWin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -1322,11 +1233,11 @@
         <state relative-caret-position="839">
           <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding>
-            <element signature="method#UserServiceImpl#0;class#UserServiceImpl#0" expanded="true" />
-            <element signature="method#login#0;class#UserServiceImpl#0" expanded="true" />
-            <element signature="method#logout#0;class#UserServiceImpl#0" expanded="true" />
-            <element signature="method#add#0;class#UserServiceImpl#0" expanded="true" />
-            <element signature="method#isExisting#0;class#UserServiceImpl#0" expanded="true" />
+            <element signature="method#UserServiceImpl#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#login#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#logout#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#add#0;class#UserServiceImpl#0" expanded="false" />
+            <element signature="method#isExisting#0;class#UserServiceImpl#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1360,22 +1271,11 @@
     <entry file="file://$PROJECT_DIR$/BF/src/ui/SaveFileWinController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
-          <caret line="46" column="42" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="46" selection-end-column="42" />
+          <caret line="46" column="42" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="46" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1981#1982#0" expanded="true" />
             <element signature="e#2037#2038#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/IOServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="method#writeFile#0;class#IOServiceImpl#0" expanded="true" />
-            <element signature="method#readFileList#0;class#IOServiceImpl#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1391,20 +1291,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/ExecuteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="48" column="63" lean-forward="true" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
-          <folding>
-            <element signature="method#execute#0;class#ExecuteServiceImpl#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BF/src/data/Temp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1420,18 +1310,48 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/ExecuteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="method#execute#0;class#ExecuteServiceImpl#0" expanded="true" />
+            <element signature="method#compile#0;class#ExecuteServiceImpl#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/OokServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BFServer/src/serviceImpl/IOServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="method#writeFile#0;class#IOServiceImpl#0" expanded="true" />
+            <element signature="method#readFileList#0;class#IOServiceImpl#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BF/src/ui/MainWinController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="130" column="70" lean-forward="false" selection-start-line="130" selection-start-column="70" selection-end-line="130" selection-end-column="70" />
+        <state relative-caret-position="415">
+          <caret line="140" column="46" lean-forward="false" selection-start-line="140" selection-start-column="46" selection-end-line="140" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#731#732#0" expanded="true" />
             <element signature="e#763#764#0" expanded="true" />
-            <element signature="method#getVersions#0;class#MainWinController#0" expanded="true" />
             <element signature="method#onExecuteMenu#0;class#MainWinController#0" expanded="true" />
             <element signature="method#onUndoMenu#0;class#MainWinController#0" expanded="true" />
             <element signature="method#onRedoMenu#0;class#MainWinController#0" expanded="true" />
+            <element signature="method#onNewMenu#0;class#MainWinController#0" expanded="true" />
           </folding>
         </state>
       </provider>
