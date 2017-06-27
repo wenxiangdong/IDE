@@ -40,6 +40,7 @@ public class MainWinController {
     public HBox noticeBox;
     public Label undo=new Label("undo");
     public MenuItem userNameMenu;
+    String undoType="code";
 
 
     /*
@@ -112,11 +113,14 @@ public class MainWinController {
         codeText.setPromptText("Please new a file or open one");
 
         //undo按钮
-        undo.setUnderline(true);
+//        undo.setUnderline(true);
         undo.setTextFill(Color.BLUE);
         undo.setOnMouseClicked(e->{
             codeText.setText(Temp.lastCodes);
             codeText.positionCaret(Temp.lastCodes.length());//光标移到最后
+            if(undoType!=null&&undoType.equals("file")){
+                Temp.openingFile=Temp.lastFile;//重置正在打开的文件
+            }
         });
         noticeLabel.setText(Temp.currentMode.toString());
 
@@ -128,17 +132,21 @@ public class MainWinController {
             int pos=codeText.caretPositionProperty().intValue();
             switch (e.getCode()){
                 case O:
-                    StringBuilder temp=new StringBuilder(codeText.getText());
-                    temp.replace(pos-1,pos,"Ook");
+                    if(Temp.currentMode ==Mode.Ook){
+                        StringBuilder temp=new StringBuilder(codeText.getText());
+                        temp.replace(pos-1,pos,"Ook");
 //                    temp.insert(pos-1,"Ook");
-                    codeText.setText(temp.toString());
-                    codeText.positionCaret(pos+2);
+                        codeText.setText(temp.toString());
+                        codeText.positionCaret(pos+2);
+                    }
                     break;
                 case OPEN_BRACKET:
-                    StringBuilder builder=new StringBuilder(codeText.getText());
-                    builder.insert(pos,']');
-                    codeText.setText(builder.toString());
-                    codeText.positionCaret(pos);
+                    if(Temp.currentMode == Mode.BF){
+                        StringBuilder builder=new StringBuilder(codeText.getText());
+                        builder.insert(pos,']');
+                        codeText.setText(builder.toString());
+                        codeText.positionCaret(pos);
+                    }
                     break;
 
             }
@@ -223,6 +231,7 @@ public class MainWinController {
     public void onClearMenu(ActionEvent actionEvent) {
         Temp.lastCodes=codeText.getText();
         codeText.clear();
+        undoType="code";
         changeNotice("All the codes has been cleared!",true);
     }
 
@@ -250,6 +259,36 @@ public class MainWinController {
             }
         },3000);
     }
+//    /*
+//    type file , clear
+//     */
+//    public void changeNotice(String msg,String type){
+//        String origin=Temp.currentMode.toString();
+//        noticeLabel.setText(msg);
+//        switch (type){
+//            case "file":
+//                if(Temp.lastFile!=null){
+//                    Temp.openingFile=Temp.lastFile;
+//                }
+//                noticeBox.getChildren().add(undo);
+//                break;
+//            case "clear":
+//                noticeBox.getChildren().add(undo);
+//                break;
+//        }
+//        Timer timer=new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                Platform.runLater(()->{
+//                    noticeLabel.setText(origin);
+//                    if(noticeBox.getChildren().contains(undo)){
+//                        noticeBox.getChildren().remove(undo);
+//                    }
+//                });
+//            }
+//        },3000);
+//    }
 
     public void onModeSwiftClicked(ActionEvent actionEvent) {
         MenuItem menuItem=(MenuItem)actionEvent.getSource();
@@ -309,7 +348,9 @@ public class MainWinController {
         inputText.clear();
         outputText.clear();
         codeText.setPromptText("Coding here");
+        undoType="file";
         changeNotice("New a file successfully!",true);
+        Temp.lastFile=Temp.openingFile;
         Temp.openingFile=null;
 
     }
