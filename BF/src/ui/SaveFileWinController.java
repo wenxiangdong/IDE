@@ -2,12 +2,10 @@ package ui;
 
 import data.Temp;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import rmi.RemoteHelper;
 import service.IOService;
 
@@ -30,34 +28,33 @@ public class SaveFileWinController {
     public Button saveBtn;
 
     public void onSaveBtnClick(ActionEvent actionEvent) {
-        String code=SaveFileWin.code;
+        String code = SaveFileWin.code;
 
-        String filename=filenameText.getText();
+        String filename = filenameText.getText();
 
-        Pattern pattern=Pattern.compile("[\\\\/:*?\"<>|]");
-        Matcher matcher=pattern.matcher(filename);
-        if(matcher.find()){
+        Pattern pattern = Pattern.compile("[\\\\/:*?\"<>|]");//正则表达式
+        Matcher matcher = pattern.matcher(filename);
+        if (matcher.find()) {
             noticLabel.setText("Illegel Name!");
             filenameText.requestFocus();
             filenameText.selectAll();
-        }else{
+        } else {
             //时间作为版本号
-            DateFormat df=new SimpleDateFormat("yyyyMMddHHmmss");
-            Date now=new Date();
-            String version=df.format(now);
+            DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+            Date now = new Date();
+            String version = df.format(now);
 
             IOService ioService = RemoteHelper.getInstance().getIOService();
             try {
-                ioService.writeFile(code, Temp.currentUser,filename+"."+Temp.currentMode.toString().toLowerCase()+"_"+version);
+                ioService.writeFile(code, Temp.currentUser, filename + "." + Temp.currentMode.toString().toLowerCase() + "_" + version);
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
             //保存成功反馈
-            Temp.openingFile=filename+"."+Temp.currentMode.toString().toLowerCase();
+            Temp.openingFile = filename + "." + Temp.currentMode.toString().toLowerCase();
             vBox.getChildren().remove(filenameText);
             noticLabel.setText("Done!");
             btnBox.getChildren().remove(saveBtn);
-
         }
     }
 

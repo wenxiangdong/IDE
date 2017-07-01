@@ -6,9 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
 import rmi.RemoteHelper;
 
 import java.io.IOException;
@@ -23,24 +22,23 @@ public class LoginWinController {
     public AnchorPane root;
 
     public void onLoginBtnClick(ActionEvent actionEvent) {
-        String username=usernameText.getText();
-        String password=passwordText.getText();
-        if((!username.equals(""))){//用户名不为空
+        String username = usernameText.getText();
+        String password = passwordText.getText();
+        if ((!username.equals(""))) {//用户名不为空
             try {
 
-                if(RemoteHelper.getInstance().getUserService().isExisting(username)){//用户名存在
+                if (RemoteHelper.getInstance().getUserService().isExisting(username)) {//用户名存在
 
-                    if(RemoteHelper.getInstance().getUserService().login(username,password)){
-                    //new a window
-                        Temp.currentUser=username;
+                    if (RemoteHelper.getInstance().getUserService().login(username, password)) {
+                        //new a window
+                        Temp.currentUser = username;
                         usernameText.getScene().getWindow().hide();
                         new MainWin();
-                    }else{
+                    } else {
                         passwordText.clear();
                         passwordText.setPromptText("用户名或密码有误");
-//                        passwordText.requestFocus();
                     }
-                }else{
+                } else {
                     usernameText.clear();
                     usernameText.setPromptText("该用户不存在");
                     passwordText.clear();
@@ -51,7 +49,7 @@ public class LoginWinController {
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
-        }else{
+        } else {
             passwordText.clear();
             usernameText.clear();
             usernameText.setPromptText("用户名不能为空");
@@ -60,8 +58,8 @@ public class LoginWinController {
 
     public void onSignUpLabelClicked(MouseEvent mouseEvent) {
         try {
-            AnchorPane root2=FXMLLoader.load(getClass().getResource("SignupWin.fxml"));
-            Scene scene=root.getScene();
+            AnchorPane root2 = FXMLLoader.load(getClass().getResource("SignupWin.fxml"));
+            Scene scene = root.getScene();
             scene.setRoot(root2);
             scene.getStylesheets().add(getClass().getResource("SignupWin.css").toExternalForm());
             System.out.println("change");

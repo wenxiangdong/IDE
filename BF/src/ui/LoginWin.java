@@ -1,6 +1,5 @@
 package ui;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -15,10 +14,10 @@ import java.io.IOException;
 public class LoginWin extends Stage {
     AnchorPane root;
 
-    public LoginWin(){
+    public LoginWin() {
         try {
-            root= FXMLLoader.load(getClass().getResource("LoginWin.fxml"));
-            Scene scene =new Scene(root,400,600);
+            root = FXMLLoader.load(getClass().getResource("LoginWin.fxml"));
+            Scene scene = new Scene(root, 400, 600);
             scene.getStylesheets().add(getClass().getResource("LoginWin.css").toExternalForm());
 
             this.setScene(scene);

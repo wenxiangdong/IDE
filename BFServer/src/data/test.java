@@ -1,7 +1,5 @@
 package data;
 
-import java.io.*;
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -32,13 +30,14 @@ public class test {
 //            e.printStackTrace();
 //        }
 
-        HashSet<String> set=new HashSet<>();
+        HashSet<String> set = new HashSet<>();
         System.out.println(set.add("a"));
         System.out.println(set.add("a"));
 
 
     }
-    public static  void writeUserInfo(){
+
+    public static void writeUserInfo() {
 
     }
 }
